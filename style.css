@@ -14,3 +14,11 @@
     margin-right: auto;
     width: 50%
 }
+
+@media screen and (max-width: 992px) {
+    .card .card-image,
+    .card .card-image .image img{
+        width: 100%;
+        height: auto;
+    }
+  }
