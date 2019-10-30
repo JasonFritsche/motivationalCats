@@ -3,35 +3,32 @@ let dataQuoteText;
 let catUrl;
 
 const getData = () => {
-	getQuote();
-	getCat();
+  getQuote();
+  getCat();
 };
 
 const getQuote = () => {
-	fetch("https://quote-garden.herokuapp.com/quotes/random")
-		.then(res => res.json())
-		.then(data => {
-			dataAuthor = data.quoteAuthor;
-			dataQuoteText = data.quoteText;
-			quoteText.innerHTML = dataQuoteText;
-			if(dataAuthor === "") {
-				quoteAuthor.innerHTML = "Anonymous";
-			}
-			else {
-				quoteAuthor.innerHTML = dataAuthor;
-			}
-		});
+  fetch("https://quote-garden.herokuapp.com/quotes/random")
+    .then(res => res.json())
+    .then(data => {
+      dataAuthor = data.quoteAuthor;
+      dataQuoteText = data.quoteText;
+      quoteText.innerHTML = dataQuoteText;
+      if (dataAuthor === "") {
+        quoteAuthor.innerHTML = "Anonymous";
+      } else {
+        quoteAuthor.innerHTML = dataAuthor;
+      }
+    });
 };
 
 const getCat = () => {
-	fetch("https://aws.random.cat/meow")
-		.then(res => res.json())
-		.then(data => {
-			catUrl = data.file;
-		});
-
-	catImgSrc.src = catUrl;
-	console.log(catImgSrc);
+  fetch("https://aws.random.cat/meow")
+    .then(res => res.json())
+    .then(data => {
+      catUrl = data.file;
+      catImgSrc.src = catUrl;
+    });
 };
 
 let quoteText = document.getElementById("moteQuote");
@@ -40,6 +37,6 @@ let catImgSrc = document.getElementById("catImg");
 
 const quoteButton = document.getElementById("quoteGetter");
 quoteButton.onclick = () => {
-	getCat();
-	getQuote();
+  getCat();
+  getQuote();
 };
