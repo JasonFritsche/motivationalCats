@@ -8,3 +8,9 @@
 	min-height: 80vh;
 	min-width: 60vw;
 }
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%
+}
