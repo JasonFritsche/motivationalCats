@@ -4,6 +4,9 @@
 	width: auto;
 }
 
+.footer {
+    padding-bottom : 3em;
+}
 .card {
 	min-height: 80vh;
 	min-width: 60vw;
