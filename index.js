@@ -37,6 +37,5 @@ let catImgSrc = document.getElementById("catImg");
 
 const quoteButton = document.getElementById("quoteGetter");
 quoteButton.onclick = () => {
-  getCat();
-  getQuote();
+  getData();
 };
