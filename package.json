@@ -1,0 +1,14 @@
+{
+  "name": "motivationalcats",
+  "version": "1.0.0",
+  "description": "cats and motivational quotes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jason l fritsche",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.8.0"
+  }
+}

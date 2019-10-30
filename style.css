@@ -1,0 +1,10 @@
+.card .card-image,
+.card .card-image .image img {
+	height: 45vh;
+	width: auto;
+}
+
+.card {
+	min-height: 80vh;
+	min-width: 60vw;
+}
