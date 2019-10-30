@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css" />
-		<link rel="stylesheet" href="style.css" />
-		<title>Motivational Cats</title>
-	</head>
-	<body onload="getData()">
-		<section class="section">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Motivational Cats</title>
+</head>
+
+<body onload="getData()">
+	<section class="hero is-fullheight">
+		<div class="hero-body">
 			<div class="container">
 				<div
-					class="columns is-centered is-three-quarters-mobile is-three-quarters-tablet is-three-quarters-desktop is-one-third-widescreen is-one-quarter-fullhd"
-				>
-					<div class="card">
-						<div class="card-image">
-							<figure class="image is-4by3">
-								<img id="catImg" src="" alt="cat image" class="center"/>
-							</figure>
-						</div>
-						<div class="card-content">
-							<div class="content has-text-centered" id="moteQuote"></div>
-							<div class="content has-text-centered">
-								<p class="title is-4">- <span id="quoteAuthor"></span></p>
+					class="columns is-centered is-three-quarters-mobile is-three-quarters-tablet is-three-quarters-desktop is-one-third-widescreen is-one-quarter-fullhd">
+					<div class="box">
+						<div class="container has-text-centered">
+							<div class="card-image">
+								<figure class="image is-4by3">
+									<span class="icon is-medium">
+										<i class="fa fa-spinner fa-spin" style="font-size:25px;color:green"></i>
+									</span>
+									<img id="catImg" src="" alt="cat image" class="center" />
+								</figure>
 							</div>
-							<div class="content has-text-centered">
-								<a
-									class="button has-text-centered is-primary is-medium is-rounded"
-									id="quoteGetter"
-									>Get Motivated</a
-								>
+							<div class="card-content">
+								<div class="content has-text-centered" id="moteQuote"></div>
+								<div class="content has-text-centered">
+									<p class="title is-4">- <span id="quoteAuthor"></span></p>
+								</div>
+								<div class="content has-text-centered">
+									<a class="button has-text-centered is-primary is-medium is-rounded"
+										id="quoteGetter">Get
+										Motivated</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -40,7 +46,27 @@
 					<a href="https://github.com/JasonFritsche/motivationalCats" target="_blank"><img src="img/github_logo.png" height="50" width="50" /> </a>
 				</footer>
 			</div>
-		</section>
-	</body>
-	<script src="index.js"></script>
+		</div>
+
+
+
+		<div class="hero-foot has-background-white-bis">
+			<div class="content has-text-centered">
+				<strong>Contribute on GitHub</strong>
+				<br>
+				<br>
+
+				<a href="https://github.com/JasonFritsche/motivationalCats"><button class="button is-medium">
+						<span class="icon is-medium">
+							<i class="fa fa-github"></i>
+						</span>
+						<span>GitHub</span>
+					</button></a>
+
+			</div>
+		</div>
+	</section>
+</body>
+<script src="index.js"></script>
+
 </html>
