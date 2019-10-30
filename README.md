@@ -2,7 +2,7 @@
 ## Get motivated by some cat pictures and quotes
 
 ### Description
-This is an open source project that anyone can fel free to work on and contribute to. Get creative and have fun.
+This is an open source project that anyone can feel free to work on and contribute to. Get creative and have fun.
 
 ### Dependencies
 - Bulma *https://bulma.io/documentation/*
