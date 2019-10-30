@@ -14,7 +14,12 @@ const getQuote = () => {
 			dataAuthor = data.quoteAuthor;
 			dataQuoteText = data.quoteText;
 			quoteText.innerHTML = dataQuoteText;
-			quoteAuthor.innerHTML = dataAuthor;
+			if(dataAuthor === "") {
+				quoteAuthor.innerHTML = "Anonymous";
+			}
+			else {
+				quoteAuthor.innerHTML = dataAuthor;
+			}
 		});
 };
 
