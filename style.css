@@ -14,3 +14,27 @@
     margin-right: auto;
     width: 50%
 }
+
+figure{
+    position: relative;
+}
+
+.card-content{
+    position: relative;
+}
+
+.loading-indicator{
+    width: 100%;
+    text-align: center;
+}
+
+.loading-card-image{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    z-index: 1;
+}
+
+.loading-card-content{
+    height: 50px;
+}
