@@ -1,16 +1,23 @@
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%
+}
+.card {
+	min-height: 80vh;
+	min-width: 60vw;
+	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+	-webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+}
+.card-image {
+	padding-top: 1.5rem;
+}
 .card .card-image,
 .card .card-image .image img {
 	height: 45vh;
 	width: auto;
 }
-
-.card {
-	min-height: 80vh;
-	min-width: 60vw;
-}
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%
+#moteQuote {
+	margin-top: 1.5rem;
 }
