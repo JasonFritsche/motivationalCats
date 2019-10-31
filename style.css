@@ -1,3 +1,5 @@
+@import "../motivationalCats/node_modules/bulma/css/bulma.css";
+
 .card .card-image,
 .card .card-image .image img {
 	height: 45vh;
@@ -5,23 +7,23 @@
 }
 
 .footer {
-    padding-bottom : 3em;
+	padding-bottom: 3em;
 }
 .card {
 	min-height: 80vh;
 	min-width: 60vw;
 }
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 }
 
 @media screen and (max-width: 992px) {
-    .card .card-image,
-    .card .card-image .image img{
-        width: 100%;
-        height: auto;
-    }
-  }
+	.card .card-image,
+	.card .card-image .image img {
+		width: 100%;
+		height: auto;
+	}
+}
