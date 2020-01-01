@@ -1,41 +1,20 @@
-let dataAuthor;
-let dataQuoteText;
-let catUrl;
-
-const getData = () => {
-  getQuote();
-  getCat();
-};
-
-const getQuote = () => {
-  fetch("https://quote-garden.herokuapp.com/quotes/random")
-    .then(res => res.json())
-    .then(data => {
-      dataAuthor = data.quoteAuthor;
-      dataQuoteText = data.quoteText;
-      quoteText.innerHTML = dataQuoteText;
-      if (dataAuthor === "") {
-        quoteAuthor.innerHTML = "Anonymous";
-      } else {
-        quoteAuthor.innerHTML = dataAuthor;
-      }
-    });
-};
-
-const getCat = () => {
-  fetch("https://aws.random.cat/meow")
-    .then(res => res.json())
-    .then(data => {
-      catUrl = data.file;
-      catImgSrc.src = catUrl;
-    });
-};
-
 let quoteText = document.getElementById("moteQuote");
 let quoteAuthor = document.getElementById("quoteAuthor");
-let catImgSrc = document.getElementById("catImg");
+let catImage = document.getElementById("catImg");
 
-const quoteButton = document.getElementById("quoteGetter");
-quoteButton.onclick = () => {
-  getData();
+const getApi = async url => {
+  const req = await fetch(url);
+  const res = await req.json();
+  return res;
 };
+
+const getData = async () => {
+  const imageData = await getApi("https://aws.random.cat/meow");
+  const quoteData = await getApi("https://quote-garden.herokuapp.com/quotes/random");
+  catImage.src = imageData.file;
+  quoteText.innerHTML = quoteData.quoteText;
+  quoteData.quoteAuthor === "" ? quoteAuthor.innerHTML = "Anonymous": quoteAuthor.innerHTML = quoteData.quoteAuthor;
+};
+
+document.getElementById("quoteGetter").onclick = () => getData();
+document.addEventListener("DOMContentLoaded", () => getData());
