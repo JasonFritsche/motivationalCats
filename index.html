@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="stylesheet" href="bulma.css" />
-		<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-		<link rel="stylesheet" href="style.css" />
-		<title>Motivational Cats</title>
-	</head>
-	<body onload="getData()">
-		<section class="section">
-			<div class="container">
-				<div
-					class="columns is-centered is-three-quarters-mobile is-three-quarters-tablet is-three-quarters-desktop is-one-third-widescreen is-one-quarter-fullhd">
-					<div class="box">
-						<div class="container has-text-centered">
-							<div class="card-image">
-								<figure class="image is-4by3">
-									<span class="icon is-medium">
-										<i class="fa fa-spinner fa-spin" style="font-size:25px;color:green"></i>
-									</span>
-									<img id="catImg" src="" alt="cat image" class="center" />
-								</figure>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<link rel="stylesheet" href="style.css" />
+	<title>Motivational Cats</title>
+</head>
+
+<body>
+	<section class="section">
+		<div class="container">
+			<div
+				class="columns is-centered is-three-quarters-mobile is-three-quarters-tablet is-three-quarters-desktop is-one-third-widescreen is-one-quarter-fullhd">
+				<div class="box">
+					<div class="container has-text-centered">
+						<div class="card-image">
+							<figure class="image is-4by3">
+								<span class="icon is-medium">
+									<i class="fa fa-spinner fa-spin" style="font-size:25px;color:green"></i>
+								</span>
+								<img id="catImg" src="" alt="cat image" class="center" />
+							</figure>
+						</div>
+						<div class="card-content">
+							<div class="content has-text-centered" id="moteQuote"></div>
+							<div class="content has-text-centered">
+								<p class="title is-4">- <span id="quoteAuthor"></span></p>
 							</div>
-							<div class="card-content">
-								<div class="content has-text-centered" id="moteQuote"></div>
-								<div class="content has-text-centered">
-									<p class="title is-4">- <span id="quoteAuthor"></span></p>
-								</div>
-								<div class="content has-text-centered">
-									<a class="button has-text-centered is-primary is-medium is-rounded"
-										id="quoteGetter">Get
-										Motivated</a>
-								</div>
+							<div class="content has-text-centered">
+								<a class="button has-text-centered is-primary is-medium is-rounded" id="quoteGetter">Get
+									Motivated</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		</section>
-		<footer class="footer">
-			<div class="content has-text-centered">
-			  <p>
+	</section>
+	<footer class="footer">
+		<div class="content has-text-centered">
+			<p>
 				<strong>motivationalCats</strong> by <a href="https://github.com/JasonFritsche">Jason Fritsche </a>
-			  </p>
-			  <p>Source Code of the following can be found on
-				<a href="https://github.com/JasonFritsche/motivationalCats">motivationalCats Github Repo</a>
-				<i class="fab fa-github-square"></i> 
 			</p>
-			</div>
-		  </footer>
-	</body>
-	<script src="index.js"></script>
+			<p>Source Code of the following can be found on
+				<a href="https://github.com/JasonFritsche/motivationalCats">motivationalCats Github Repo</a>
+				<i class="fab fa-github-square"></i>
+			</p>
+		</div>
+	</footer>
+</body>
+<script src="index.js"></script>
+
 </html>
