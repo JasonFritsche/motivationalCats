@@ -3,8 +3,12 @@
     width: auto;
 }
 
+.section {
+    height: 85vh;
+}
+
 .footer {
-    padding-bottom: 3em;
+    height: 15vh;
 }
 .container {
     min-height: 70vh;
@@ -20,9 +24,12 @@
 }
 
 @media screen and (max-width: 992px) {
-    .card .card-image,
-    .card .card-image .image img {
-        width: 100%;
+    .container {
+        max-width: 95vw;
+    }
+
+    #catImg {
         height: auto;
+        max-height: 24vh;
     }
 }
