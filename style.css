@@ -1,27 +1,28 @@
-.card .card-image,
-.card .card-image .image img {
-	height: 45vh;
-	width: auto;
+#catImg {
+    height: 45vh;
+    width: auto;
 }
 
 .footer {
-	padding-bottom: 3em;
+    padding-bottom: 3em;
 }
-.card {
-	min-height: 80vh;
-	min-width: 60vw;
+.container {
+    min-height: 70vh;
+    min-width: 30vw;
+    max-height: 85vh;
+    max-width: 35vw;
 }
 .center {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 @media screen and (max-width: 992px) {
-	.card .card-image,
-	.card .card-image .image img {
-		width: 100%;
-		height: auto;
-	}
+    .card .card-image,
+    .card .card-image .image img {
+        width: 100%;
+        height: auto;
+    }
 }
