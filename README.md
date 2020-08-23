@@ -5,7 +5,7 @@
 This is an open source project that anyone can feel free to work on and contribute to. Get creative and have fun.
 
 ### Dependencies
-- Bulma *https://bulma.io/documentation/*
+- Materialize *https://materializecss.com/*
 
 ### Contribute
 - Fork the repo, then clone. Create a new branch for any issue you're working on. Make a PR.
