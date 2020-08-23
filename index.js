@@ -11,8 +11,8 @@ const getQuote = () => {
     fetch('https://quote-garden.herokuapp.com/quotes/random')
         .then((res) => res.json())
         .then((data) => {
-            const dataAuthor = data.quoteAuthor;
-            const dataQuoteText = data.quoteText;
+            const dataAuthor = `- ${data.quoteAuthor}`;
+            const dataQuoteText = `"${data.quoteText}"`;
             quoteText.innerHTML = dataQuoteText;
             if (dataAuthor === '') {
                 quoteAuthor.innerHTML = 'Anonymous';
