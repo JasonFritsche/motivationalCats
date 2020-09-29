@@ -4,7 +4,7 @@ let catImgSrc = document.getElementById('catImg');
 
 const getData = () => {
     getQuote();
-    getCat();
+    getCatImage();
 };
 
 const getQuote = () => {
@@ -22,7 +22,7 @@ const getQuote = () => {
         });
 };
 
-const getCat = () => {
+const getCatImage = () => {
     fetch('https://api.thecatapi.com/v1/images/search')
         .then((res) => res.json())
         .then((data) => {
