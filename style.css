@@ -8,6 +8,17 @@
     font-family: "Roboto Slab", serif;
 }
 
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    overflow: hidden;
+}
+
+.card-action {
+    margin-top: auto;
+}
+
 .footer-container {
     text-align: center;
     height: 8vh;
