@@ -15,8 +15,8 @@ const getQuote = () => {
         .then((data) => {
             const dataAuthor = `- ${data.quoteAuthor}`;
             const dataQuoteText = `"${data.quoteText}"`;
-            quoteLoader.style.display = 'none';
             quoteText.innerHTML = dataQuoteText;
+            quoteLoader.style.display = 'none';
             if (dataAuthor === '') {
                 quoteAuthor.innerHTML = 'Anonymous';
             } else {
@@ -30,9 +30,8 @@ const getCatImage = () => {
         .then((res) => res.json())
         .then((data) => {
             const catUrl = data[0].url;
-            catImgSrc.src = catUrl;
-            catImgSrc.style.display = 'block';
-            catLoader.style.display = 'none';
+            catLoader.innerHTML = '<img id="catImg" src="' + catUrl + '"alt="cat image" class="responsive-img center-align" />';
+            catLoader.classList.remove("loader");
         });
 };
 
