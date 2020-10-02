@@ -7,6 +7,12 @@
 #quoteAuthor {
     font-family: "Roboto Slab", serif;
 }
+.navbar-brand{
+  text-align: center;
+  font-size: large;
+  font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .card{
     display: flex;
