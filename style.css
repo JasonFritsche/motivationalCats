@@ -2,7 +2,9 @@
     height: 45vh;
     width: auto;
 }
-
+.HeaderTitle{
+   font-family: "Roboto Slab", serif;
+}
 #moteQuote,
 #quoteAuthor {
     font-family: "Roboto Slab", serif;
