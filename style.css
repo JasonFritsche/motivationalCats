@@ -99,3 +99,8 @@ main {
     transform: rotate(360deg);
   }
 }
+
+.heading{
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+}
