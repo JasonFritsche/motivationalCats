@@ -3,6 +3,14 @@
     width: auto;
 }
 
+
+.header {
+  margin-right: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  shape-rendering: 2px;
+}
+
 #moteQuote,
 #quoteAuthor {
     font-family: "Roboto Slab", serif;
