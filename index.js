@@ -1,7 +1,6 @@
 let quoteText = document.getElementById('moteQuote');
 let quoteAuthor = document.getElementById('quoteAuthor');
 let catImgSrc = document.getElementById('catImg');
-let catLoader = document.getElementById('catLoader');
 let quoteLoader = document.getElementById('quoteLoader');
 
 const getData = () => {
@@ -30,8 +29,10 @@ const getCatImage = () => {
         .then((res) => res.json())
         .then((data) => {
             const catUrl = data[0].url;
-            catLoader.innerHTML = '<img id="catImg" src="' + catUrl + '"alt="cat image" class="responsive-img center-align" />';
-            catLoader.classList.remove("loader");
+
+            catImgSrc.src=catUrl;
+
+ 
         });
 };
 
