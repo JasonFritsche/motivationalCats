@@ -147,6 +147,10 @@ nav {
   margin-top: 16px;
 }
 
+.nav-wrapper {
+  padding: .5rem 4rem;
+}
+
 @keyframes pulse {
   from {
     transform: scale(1);
@@ -160,5 +164,11 @@ nav {
 .heading {
   font-family: 'Permanent Marker', cursive;
   text-align: center;
-  padding: 0.25em 0;
+  padding: 0.25em 0 2rem;
+  margin: 0;
+}
+
+
+.row {
+  margin: 2rem;
 }
