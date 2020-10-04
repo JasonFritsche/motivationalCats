@@ -1,42 +1,69 @@
 let quoteText = document.getElementById('moteQuote');
 let quoteAuthor = document.getElementById('quoteAuthor');
 let catImgSrc = document.getElementById('catImg');
-let quoteLoader = document.getElementById('quoteLoader');
+let loader = document.getElementById('loader')
 
-const getData = () => {
-    getQuote();
-    getCatImage();
+const activateLoader = () => {
+    loader.classList.add('activated');
 };
 
-const getQuote = () => {
-    fetch('https://quote-garden.herokuapp.com/quotes/random')
-        .then((res) => res.json())
-        .then((data) => {
-            const dataAuthor = `- ${data.quoteAuthor}`;
-            const dataQuoteText = `"${data.quoteText}"`;
-            quoteText.innerHTML = dataQuoteText;
-            quoteLoader.style.display = 'none';
-            if (dataAuthor === '') {
-                quoteAuthor.innerHTML = 'Anonymous';
-            } else {
-                quoteAuthor.innerHTML = dataAuthor;
-            }
-        });
+const deactivateLoader = () => {
+    loader.classList.remove('activated');
 };
 
-const getCatImage = () => {
-    fetch('https://api.thecatapi.com/v1/images/search')
-        .then((res) => res.json())
-        .then((data) => {
-            const catUrl = data[0].url;
+const getData = async () => {
+    activateLoader();
 
-            catImgSrc.src=catUrl;
+    await getQuote();
+    await getCatImage();
 
- 
-        });
+    if (catImgSrc.dataset.loading === 'false') {
+        deactivateLoader();
+    }
+};
+
+const getQuote = async () => {
+    const res = await fetch('https://quote-garden.herokuapp.com/quotes/random');
+    const data = await res.json()
+    const dataAuthor = `- ${data.quoteAuthor}`;
+    const dataQuoteText = `"${data.quoteText}"`;
+    quoteText.innerHTML = dataQuoteText;
+    if (dataAuthor === '') {
+        quoteAuthor.innerHTML = 'Anonymous';
+    } else {
+        quoteAuthor.innerHTML = dataAuthor;
+    }
+};
+
+const getCatImage = async () => {
+    const res = await fetch('https://api.thecatapi.com/v1/images/search')
+    const data = await res.json()
+    const catUrl = data[0].url;
+
+    catImgSrc.src = catUrl;
+    catImgSrc.dataset.loading = true;
 };
 
 const quoteButton = document.getElementById('quoteGetter');
 quoteButton.onclick = () => {
     getData();
 };
+
+catImgSrc.addEventListener('load', () => {
+    catImgSrc.dataset.loading = false;
+})
+
+const imageObserver = new MutationObserver(mutations => {
+    mutations.forEach(mutationRecord => {
+        const { loading } = mutationRecord.target.dataset;
+        
+        if (loading === 'false') {
+            deactivateLoader();
+        }
+    });
+});
+
+imageObserver.observe(catImgSrc, {
+    attributes: true,
+    attributeFilter: ['data-loading'],
+});
