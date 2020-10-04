@@ -3,37 +3,30 @@ let quoteAuthor = document.getElementById('quoteAuthor');
 let catImgSrc = document.getElementById('catImg');
 let quoteLoader = document.getElementById('quoteLoader');
 
-const getData = () => {
-    getQuote();
-    getCatImage();
+const getData = async () => {
+    await getQuote();
+    await getCatImage();
 };
 
-const getQuote = () => {
-    fetch('https://quote-garden.herokuapp.com/quotes/random')
-        .then((res) => res.json())
-        .then((data) => {
-            const dataAuthor = `- ${data.quoteAuthor}`;
-            const dataQuoteText = `"${data.quoteText}"`;
-            quoteText.innerHTML = dataQuoteText;
-            quoteLoader.style.display = 'none';
-            if (dataAuthor === '') {
-                quoteAuthor.innerHTML = 'Anonymous';
-            } else {
-                quoteAuthor.innerHTML = dataAuthor;
-            }
-        });
+const getQuote = async () => {
+    const res = await fetch('https://quote-garden.herokuapp.com/quotes/random');
+    const data = await res.json()
+    const dataAuthor = `- ${data.quoteAuthor}`;
+    const dataQuoteText = `"${data.quoteText}"`;
+    quoteText.innerHTML = dataQuoteText;
+    if (dataAuthor === '') {
+        quoteAuthor.innerHTML = 'Anonymous';
+    } else {
+        quoteAuthor.innerHTML = dataAuthor;
+    }
 };
 
-const getCatImage = () => {
-    fetch('https://api.thecatapi.com/v1/images/search')
-        .then((res) => res.json())
-        .then((data) => {
-            const catUrl = data[0].url;
+const getCatImage = async () => {
+    const res = await fetch('https://api.thecatapi.com/v1/images/search')
+    const data = await res.json()
+    const catUrl = data[0].url;
 
-            catImgSrc.src=catUrl;
-
- 
-        });
+    catImgSrc.src = catUrl;
 };
 
 const quoteButton = document.getElementById('quoteGetter');
