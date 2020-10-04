@@ -1,11 +1,25 @@
 let quoteText = document.getElementById('moteQuote');
 let quoteAuthor = document.getElementById('quoteAuthor');
 let catImgSrc = document.getElementById('catImg');
-let quoteLoader = document.getElementById('quoteLoader');
+let loader = document.getElementById('loader')
+
+const activateLoader = () => {
+    loader.classList.add('activated');
+};
+
+const deactivateLoader = () => {
+    loader.classList.remove('activated');
+};
 
 const getData = async () => {
+    activateLoader();
+
     await getQuote();
     await getCatImage();
+
+    if (catImgSrc.dataset.loading === 'false') {
+        deactivateLoader();
+    }
 };
 
 const getQuote = async () => {
@@ -27,9 +41,29 @@ const getCatImage = async () => {
     const catUrl = data[0].url;
 
     catImgSrc.src = catUrl;
+    catImgSrc.dataset.loading = true;
 };
 
 const quoteButton = document.getElementById('quoteGetter');
 quoteButton.onclick = () => {
     getData();
 };
+
+catImgSrc.addEventListener('load', () => {
+    catImgSrc.dataset.loading = false;
+})
+
+const imageObserver = new MutationObserver(mutations => {
+    mutations.forEach(mutationRecord => {
+        const { loading } = mutationRecord.target.dataset;
+        
+        if (loading === 'false') {
+            deactivateLoader();
+        }
+    });
+});
+
+imageObserver.observe(catImgSrc, {
+    attributes: true,
+    attributeFilter: ['data-loading'],
+});
