@@ -160,5 +160,5 @@ nav {
 .heading {
   font-family: 'Permanent Marker', cursive;
   text-align: center;
-  padding: 0.25em 0;
+  padding: 0.25em 0 1.50em 0;  /* Padding below the text */
 }
