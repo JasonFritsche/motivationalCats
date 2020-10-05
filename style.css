@@ -19,6 +19,11 @@
   margin-top: auto;
 }
 
+.card .card-content {
+  height: 90%;
+  overflow-y: auto;
+}
+
 .footer-container {
   text-align: center;
   height: 8vh;
