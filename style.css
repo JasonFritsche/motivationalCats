@@ -7,6 +7,10 @@
   font-family: "Roboto Slab", serif;
 }
 
+.card .card-content {
+  height: 90%;
+  overflow-y: auto;
+}
 .card {
   display: flex;
   flex-direction: column;
@@ -18,14 +22,12 @@
   margin-top: auto;
 }
 
-.card .card-content {
-  height: 90%;
-  overflow-y: auto;
-}
-
 .footer-container {
   text-align: center;
-  height: 8vh;
+  padding: 0;
+}
+.page-footer{
+	padding: 0;
 }
 
 body {
@@ -168,7 +170,7 @@ nav {
 .heading {
   font-family: 'Permanent Marker', cursive;
   text-align: center;
-  padding: 0.25em 0 2rem;
+  padding: 0;
   margin: 0;
 }
 
