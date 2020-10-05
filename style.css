@@ -8,6 +8,10 @@
   font-family: "Roboto Slab", serif;
 }
 
+.card .card-content {
+  height: 90%;
+  overflow-y: auto;
+}
 .card {
   display: flex;
   flex-direction: column;
