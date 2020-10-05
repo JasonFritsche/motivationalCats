@@ -1,6 +1,5 @@
 #catImg {
-  height: 30vh;
-  width: auto;
+  max-height: 30vh;
 }
 
 #moteQuote,
