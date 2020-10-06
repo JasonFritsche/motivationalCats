@@ -1,3 +1,37 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 8vh;
+}
+
+main {
+  padding-top: 1em;
+  height: 85vh;
+}
+
+footer {
+  height: 7vh;
+}
+
+nav {
+  height: auto;
+}
+
+.heading {
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  margin: 2rem;
+}
+
 #catImg {
   max-height: 30vh;
 }
@@ -11,6 +45,7 @@
   height: 90%;
   overflow-y: auto;
 }
+
 .card {
   display: flex;
   flex-direction: column;
@@ -26,26 +61,11 @@
   text-align: center;
   padding: 0;
 }
-.page-footer{
-	padding: 0;
-}
-
-body {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1 0 auto;
-}
-
-nav {
-  height: auto;
+.page-footer {
+  padding: 0;
 }
 
 /* Loader */
-
 .loader {
   font-size: 10px;
   margin: 50px auto;
@@ -54,11 +74,27 @@ nav {
   height: 11em;
   border-radius: 50%;
   background: #ffffff;
-  background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-  background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -moz-linear-gradient(
+    left,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
   background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-  background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-  background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -ms-linear-gradient(
+    left,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: linear-gradient(
+    to right,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
   position: relative;
   -webkit-animation: load3 1.4s infinite linear;
   animation: load3 1.4s infinite linear;
@@ -75,7 +111,7 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  content: '';
+  content: "";
 }
 
 .loader:after {
@@ -83,7 +119,7 @@ nav {
   width: 75%;
   height: 75%;
   border-radius: 50%;
-  content: '';
+  content: "";
   margin: auto;
   position: absolute;
   top: 0;
@@ -154,7 +190,7 @@ nav {
 }
 
 .nav-wrapper {
-  padding: .5rem 4rem;
+  padding: 0.5rem 4rem;
 }
 
 @keyframes pulse {
@@ -165,16 +201,4 @@ nav {
   to {
     transform: scale(1.3);
   }
-}
-
-.heading {
-  font-family: 'Permanent Marker', cursive;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
-
-
-.row {
-  margin: 2rem;
 }
