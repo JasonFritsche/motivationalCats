@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -10,93 +11,88 @@
     <!-- Async Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" media="print"
+        onload="this.media='all'" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" />
     </noscript>
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <link rel="stylesheet" href="style.css" />
-      <style>
-        body{
-          background: #000000;
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            background: #000000;
         }
-      </style>
-        <title>Motivational Cats</title>
-    </head>
-    <body onload="getData()" style="background-color: white;">
-        <header>
-		<nav class="page-header pink darken-4">
-			<div class="nav-wrapper">
-                <h1 class="heading"><img src="https://img.icons8.com/cute-clipart/64/000000/cat.png"/> 
-                    
-                        <span style="color:#ff7f00;">M</span>
-                        <span style="color:#ff2a00;">O</span>
-                        <span style="color:#ff5500;">T</span>
-                        <span style="color:#ff7f00;">I</span>
-                        <span style="color:#ffbf00;">V</span>
-                        <span style="color:#ffff00;">A</span>
-                        <span style="color:#aaff00;">T</span>
-                        <span style="color:#55ff00;">I</span>
-                        <span style="color:#00ff00;">O</span>
-                        <span style="color:#00ff55;">N</span>
-                        <span style="color:#00ffaa;">A</span>
-                        <span style="color:#00ffff;">L</span>
-                        <span style="color:#2da9ad;"> - </span>
-                        <span style="color:#eb849e;">C</span>
-                        <span style="color:#e09eae;">A</span>
-                        <span style="color:#26ce26;">T</span>
-                        <span style="color:#80d61d;">S</span>
-                   
-                </h1>
-			</div>
-		</nav>
-		</header>
-        <main>
-            <div class="container">
-                <div class="row">
-                    <div class="col s12 m8 l6 offset-m2 offset-l3">
-                        <div class="card pink darken-4 hoverable">
-                            <div class="card-content white-text">
-                                <p align="center">
-                                    <img
-                                        id="catImg"
-                                        src=""
-                                        alt="cat image"
-                                        class="responsive-img center-align"
-                                    />
-                                </p>
+    </style>
+    <title>Motivational Cats</title>
+</head>
 
-                                <p id="moteQuote"></p>
-                                <p class="title is-4">
-                                    <span id="quoteAuthor"></span>
-                                </p>
+<body onload="getData()" style="background-color: white;">
+    <header>
+        <nav class="page-header pink darken-4">
+            <div class="nav-wrapper">
+                <h1 class="heading"><img src="https://img.icons8.com/cute-clipart/64/000000/cat.png" />
+
+                    <span style="color:#ff7f00;">M</span>
+                    <span style="color:#ff2a00;">O</span>
+                    <span style="color:#ff5500;">T</span>
+                    <span style="color:#ff7f00;">I</span>
+                    <span style="color:#ffbf00;">V</span>
+                    <span style="color:#ffff00;">A</span>
+                    <span style="color:#aaff00;">T</span>
+                    <span style="color:#55ff00;">I</span>
+                    <span style="color:#00ff00;">O</span>
+                    <span style="color:#00ff55;">N</span>
+                    <span style="color:#00ffaa;">A</span>
+                    <span style="color:#00ffff;">L</span>
+                    <span style="color:#2da9ad;"> - </span>
+                    <span style="color:#eb849e;">C</span>
+                    <span style="color:#e09eae;">A</span>
+                    <span style="color:#26ce26;">T</span>
+                    <span style="color:#80d61d;">S</span>
+
+                </h1>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m8 l6 offset-m2 offset-l3">
+                    <div class="card pink darken-4 hoverable">
+                        <div class="card-content white-text">
+                            <p align="center">
+                                <img id="catImg" src="" alt="cat image" class="responsive-img center-align" />
+                            </p>
+
+                            <p id="moteQuote"></p>
+                            <p class="title is-4">
+                                <span id="quoteAuthor"></span>
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a class="waves-effect waves-light btn" id="quoteGetter">Get Motivated</a>
+                        </div>
+                        <div class="loading-wrapper" id="loader">
+                            <div class="img-container">
+                                <img src="img/loading-cat-face.png" alt="cat face">
                             </div>
-                            <div class="card-action">
-                                <a
-                                    class="waves-effect waves-light btn"
-                                    id="quoteGetter"
-                                    >Get Motivated</a
-                                >
-                            </div>
-                            <div class="loading-wrapper" id="loader">
-                                <div class="img-container">
-                                    <img src="img/loading-cat-face.png" alt="cat face">
-                                </div>
-                                <strong class="pink-text text-darken-4">Loading...</strong>
-                            </div>
+                            <strong class="pink-text text-darken-4">Loading...</strong>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        </main>
-        <footer class="page-footer pink darken-4">
-            <div class="footer-container">
-                <a href="https://github.com/JasonFritsche/motivationalCats">motivationalCats Github Repo</a
-                >
-            </div>
-        </footer>
-    </body>
-    <script src="index.js"></script>
+        </div>
+    </main>
+    <footer class="page-footer pink darken-4">
+        <div class="footer-container">
+            <i class="fa fa-github"></i>
+            <a class="repolink" href="https://github.com/JasonFritsche/motivationalCats">motivationalCats Repo</a>
+        </div>
+    </footer>
+</body>
+<script src="index.js"></script>
+
 </html>
