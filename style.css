@@ -26,6 +26,12 @@ nav {
   text-align: center;
   padding: 0;
   margin: 0;
+  font-size: min(4.2vw, 4.2rem);
+}
+
+.heading > .heading-img {
+  width: auto;
+  height: min(4.5vw, 64px);
 }
 
 .row {
@@ -198,6 +204,12 @@ nav {
 
 .nav-wrapper {
   padding: 0.5rem 4rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-wrapper {
+    padding: 0.5rem 2rem;
+  }
 }
 
 @keyframes pulse {
