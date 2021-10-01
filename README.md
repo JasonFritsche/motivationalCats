@@ -1,5 +1,5 @@
-# motivationalCats
-## Get motivated by some cat pictures and quotes
+# motivationalday
+## You are always one Descision away from a totally different life.
 
 ### About
 This is an open source project that anyone can feel free to work on and contribute to. Get creative and have fun. This project has survived two Hacktoberfests. If this site is broken, please feel free to open an issue. It'll get fixed in October :)
