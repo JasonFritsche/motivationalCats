@@ -28,7 +28,7 @@ const getQuote = async () => {
     );
     const response = await res.json();
     const data = response.data[0];
-    const dataAuthor = `- ${data.quoteAuthor}`;
+    const dataAuthor = `${data.quoteAuthor}`;
     const dataQuoteText = `"${data.quoteText}"`;
 
     quoteText.innerHTML = dataQuoteText;
