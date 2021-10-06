@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -49,14 +55,14 @@ nav {
 }
 
 .card .card-content {
-  height: 90%;
+  height: auto;
   overflow-y: auto;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  height: auto;
   overflow: hidden;
 }
 
@@ -96,19 +102,27 @@ nav {
   height: 11em;
   border-radius: 50%;
   background: #ffffff;
-  background: -moz-linear-gradient(left,
-      #ffffff 10%,
-      rgba(255, 255, 255, 0) 42%);
-  background: -webkit-linear-gradient(left,
-      #ffffff 10%,
-      rgba(255, 255, 255, 0) 42%);
+  background: -moz-linear-gradient(
+    left,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
   background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-  background: -ms-linear-gradient(left,
-      #ffffff 10%,
-      rgba(255, 255, 255, 0) 42%);
-  background: linear-gradient(to right,
-      #ffffff 10%,
-      rgba(255, 255, 255, 0) 42%);
+  background: -ms-linear-gradient(
+    left,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: linear-gradient(
+    to right,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
   position: relative;
   -webkit-animation: load3 1.4s infinite linear;
   animation: load3 1.4s infinite linear;
