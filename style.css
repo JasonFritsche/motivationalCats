@@ -24,10 +24,6 @@ footer {
   height: 7vh;
 }
 
-nav {
-  height: auto;
-}
-
 .heading {
   font-family: "Permanent Marker", cursive;
   text-align: center;
@@ -45,8 +41,14 @@ nav {
   margin: 2rem;
 }
 
+.row .col {
+  float: none;
+  margin-right: auto;
+}
+
 #catImg {
-  max-height: 30vh;
+  max-height: 45vh;
+  object-fit: cover;
 }
 
 #moteQuote,
