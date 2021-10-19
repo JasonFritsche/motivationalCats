@@ -16,3 +16,6 @@ This is an open source project that anyone can feel free to work on and contribu
 ### Code of Conduct
 Please adhere to the [OpenJS Contributor Covenant Code of Conduct](https://github.com/openjs-foundation/cross-project-council/blob/master/CODE_OF_CONDUCT.md)
 
+### Contributors
+<img src="./CONTRIBUTORS.svg">
+
