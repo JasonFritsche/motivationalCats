@@ -17,11 +17,12 @@ header {
 main {
   padding-top: 1em;
   height: 85vh;
+  min-height: 485px;
   background-color: #ffc3f3;
 }
 
-footer {
-  height: 7vh;
+.container {
+  margin-top: 70px;
 }
 
 .heading {
@@ -74,7 +75,6 @@ footer {
 
 .footer-container {
   text-align: center;
-  padding-top: 5px;
 }
 
 .fa-github {
@@ -92,7 +92,7 @@ footer {
 }
 
 .page-footer {
-  padding: 0;
+  padding: 15px 0;
 }
 
 /* Loader */
