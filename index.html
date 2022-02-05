@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
 
     <!-- Async Google Font -->
@@ -16,7 +15,6 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" />
     </noscript>
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <style>
@@ -29,47 +27,37 @@
 
   <body onload="getData()" style="background-color: white">
     <nav>
-      <div class="nav-wrapper blue lighten-3">
-        <div class="brand-logo right"><img src="https://img.icons8.com/ios/50/000000/pixel-cat.png" /></div>
-        <div id="nav-mobile" class="left hide-on-med-and-down">
+      <div class="nav-wrapper">
+        <div class=""><img src="https://img.icons8.com/ios/50/000000/pixel-cat.png" /></div>
+        <div class="nav-title-container">
           <h5 class="f-color">Motivational Cats</h5>
         </div>
       </div>
     </nav>
 
     <main>
-      <div class="container">
-        <!-- new card-->
-        <div class="row center">
-          <div class="col s12 m7">
-            <div class="card">
-              <div class="card-image">
-                <img id="catImg" src="" alt="cat image" class="responsive-img center-align" />
-              </div>
-              <div class="card-content">
-                <p id="moteQuote"></p>
-                <p class="title is-4">
-                  <i class="material-icons" style="vertical-align: middle">account_circle</i>
-                  <span id="quoteAuthor"></span>
-                </p>
-              </div>
-              <div class="card-action">
-                <a class="waves-effect waves-light btn" id="quoteGetter" style="background-color: #7606cc">Get Motivated</a>
-              </div>
-              <div class="loading-wrapper" id="loader">
-                <div class="img-container">
-                  <img src="img/loading-cat-face.png" alt="cat face" />
-                </div>
-                <strong class="pink-text text-darken-4">Loading...</strong>
-              </div>
-            </div>
+      <div class="main-container">
+        <div class="card">
+          <div class="img-container">
+            <img id="catImg" src="" alt="cat image" class="responsive-img center-align" />
+          </div>
+          <div class="card-text-container">
+            <p id="quoteText"></p>
+            <span id="quoteAuthor"></span>
+          </div>
+          <div class="button-container">
+            <button class="n" id="quoteGetter" style="background-color: #7606cc">Get Motivated</button>
           </div>
         </div>
-
-        <!-- end card -->
+        <div class="loading-wrapper" id="loader">
+          <div class="img-container">
+            <img src="img/loading-cat-face.png" alt="cat face" />
+          </div>
+          <strong class="pink-text text-darken-4">Loading...</strong>
+        </div>
       </div>
     </main>
-    <footer class="page-footer blue lighten-3">
+    <footer class="page-footer">
       <div class="footer-container">
         <i class="f-color fa fa-github"></i>
         <a class="f-color repolink" href="https://github.com/JasonFritsche/motivationalCats">motivationalCats Repo</a>

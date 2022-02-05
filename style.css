@@ -20,12 +20,12 @@ main {
   background-color: #ffc3f3;
 }
 
-nav {
-  height: 8vh;
-}
-
-.container {
-  margin-top: 1em;
+.main-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-wrapper {
@@ -35,52 +35,60 @@ nav {
   align-content: center;
 }
 
+.nav-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .f-color {
   color: #333 !important;
 }
 
-.heading {
-  font-size: 3rem;
+.card {
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  max-width: 18em;
+  background-color: lavenderblush;
 }
 
-.heading > .heading-img {
-  width: auto;
-  height: min(4.5vw, 64px);
+.card-text-container {
+  max-width: 18em;
 }
 
-.row {
-  margin: 2rem;
+.img-container {
+  align-self: center;
 }
 
-.row .col {
-  float: none;
-  margin-right: auto;
+.button-container {
+  width: 100%;
+}
+
+.button-container button {
+  background-color: #7606cc;
+  width: 100%;
+  border: none;
+  padding: 6px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.button-container button:hover {
+  cursor: pointer;
 }
 
 #catImg {
   max-height: 39vh;
+  max-width: 16em;
   object-fit: cover;
+  border: 2px solid #ffc3f3;
 }
 
-#moteQuote,
+#quoteText,
 #quoteAuthor {
   font-family: "Roboto Slab", serif;
-}
-
-.card .card-content {
-  height: auto;
-  overflow-y: auto;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  overflow: hidden;
-}
-
-.card-action {
-  margin-top: auto;
 }
 
 .footer-container {
@@ -94,7 +102,7 @@ nav {
 }
 
 .repolink {
-  color: white;
+  text-decoration: none;
 }
 
 .repolink:hover {
