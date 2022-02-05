@@ -1,73 +1,71 @@
-let quoteText = document.getElementById("moteQuote");
+let quoteText = document.getElementById("quoteText");
 let quoteAuthor = document.getElementById("quoteAuthor");
 let catImgSrc = document.getElementById("catImg");
 let loader = document.getElementById("loader");
 
 const activateLoader = () => {
-    loader.classList.add("activated");
+  loader.classList.add("activated");
 };
 
 const deactivateLoader = () => {
-    loader.classList.remove("activated");
+  loader.classList.remove("activated");
 };
 
 const getData = async () => {
-    activateLoader();
+  activateLoader();
 
-    await getQuote();
-    await getCatImage();
+  await getQuote();
+  await getCatImage();
 
-    if (catImgSrc.dataset.loading === "false") {
-        deactivateLoader();
-    }
+  if (catImgSrc.dataset.loading === "false") {
+    deactivateLoader();
+  }
 };
 
 const getQuote = async () => {
-    const res = await fetch(
-        "https://quote-garden.herokuapp.com/api/v3/quotes/random?genre=motivational"
-    );
-    const response = await res.json();
-    const data = response.data[0];
-    const dataAuthor = `${data.quoteAuthor}`;
-    const dataQuoteText = `"${data.quoteText}"`;
+  const res = await fetch("https://quote-garden.herokuapp.com/api/v3/quotes/random?genre=motivational");
+  const response = await res.json();
+  const data = response.data[0];
+  const dataAuthor = `${data.quoteAuthor}`;
+  const dataQuoteText = `"${data.quoteText}"`;
 
-    quoteText.innerHTML = dataQuoteText;
-    if (dataAuthor === "") {
-        quoteAuthor.innerHTML = "Anonymous";
-    } else {
-        quoteAuthor.innerHTML = dataAuthor;
-    }
+  quoteText.innerHTML = dataQuoteText;
+  if (dataAuthor === "") {
+    quoteAuthor.innerHTML = "Anonymous";
+  } else {
+    quoteAuthor.innerHTML = dataAuthor;
+  }
 };
 
 const getCatImage = async () => {
-    const res = await fetch("https://api.thecatapi.com/v1/images/search");
-    const data = await res.json();
-    const catUrl = data[0].url;
+  const res = await fetch("https://api.thecatapi.com/v1/images/search");
+  const data = await res.json();
+  const catUrl = data[0].url;
 
-    catImgSrc.src = catUrl;
-    catImgSrc.dataset.loading = true;
+  catImgSrc.src = catUrl;
+  catImgSrc.dataset.loading = true;
 };
 
 const quoteButton = document.getElementById("quoteGetter");
 quoteButton.onclick = () => {
-    getData();
+  getData();
 };
 
 catImgSrc.addEventListener("load", () => {
-    catImgSrc.dataset.loading = false;
+  catImgSrc.dataset.loading = false;
 });
 
 const imageObserver = new MutationObserver((mutations) => {
-    mutations.forEach((mutationRecord) => {
-        const { loading } = mutationRecord.target.dataset;
+  mutations.forEach((mutationRecord) => {
+    const { loading } = mutationRecord.target.dataset;
 
-        if (loading === "false") {
-            deactivateLoader();
-        }
-    });
+    if (loading === "false") {
+      deactivateLoader();
+    }
+  });
 });
 
 imageObserver.observe(catImgSrc, {
-    attributes: true,
-    attributeFilter: ["data-loading"],
+  attributes: true,
+  attributeFilter: ["data-loading"],
 });
