@@ -25,43 +25,37 @@
     <title>Motivational Cats</title>
   </head>
 
-  <body onload="getData()" style="background-color: white">
-    <nav>
-      <div class="nav-wrapper">
-        <div class=""><img src="https://img.icons8.com/ios/50/000000/pixel-cat.png" /></div>
-        <div class="nav-title-container">
-          <h5 class="f-color">Motivational Cats</h5>
-        </div>
+  <body onload="getData()">
+    <nav class="nav nav_size nav__nav-theme_light nav_shadow">
+      <img class="nav__img" src="https://img.icons8.com/ios/50/000000/pixel-cat.png" />
+      <div class="nav__title-container nav__title-container_position">
+        <h5 class="nav__title-text nav__title-text_size nav__title-text_light-theme">Motivational Cats</h5>
       </div>
     </nav>
 
-    <main>
-      <div class="main-container">
-        <div class="card">
-          <div class="img-container">
-            <img id="catImg" src="" alt="cat image" class="responsive-img center-align" />
-          </div>
-          <div class="card-text-container">
-            <p id="quoteText"></p>
-            <span id="quoteAuthor"></span>
-          </div>
-          <div class="button-container">
-            <button class="n" id="quoteGetter" style="background-color: #7606cc">Get Motivated</button>
-          </div>
+    <main class="main main_size main__main-theme_light">
+      <div class="card card_size card__card-theme_light">
+        <div class="img-container">
+          <img id="catImg" src="" alt="cat image" class="img-container__img img-container__img_size img-container__img-theme_light" />
         </div>
-        <div class="loading-wrapper" id="loader">
-          <div class="img-container">
-            <img src="img/loading-cat-face.png" alt="cat face" />
-          </div>
-          <strong class="pink-text text-darken-4">Loading...</strong>
+        <div class="text-container text-container_size">
+          <p id="quoteText" class="text-container__text-element text-container__text-element_size-med"></p>
+          <span id="quoteAuthor" class="text-container__text-element text-container__text-element_size-lg"></span>
+        </div>
+        <button class="btn btn__theme_light" id="quoteGetter">Get Motivated</button>
+      </div>
+
+      <div class="loader loader_position-default loader_theme-light" id="loader">
+        <strong class="loader__loader-text loader__loader-text_theme-light loader__loader-text_default-size">Loading...</strong>
+        <div class="img-container">
+          <img class="img-container__img_loader img-container__img_default-size" src="img/loading-cat-face.png" alt="cat face" />
         </div>
       </div>
     </main>
-    <footer class="page-footer">
-      <div class="footer-container">
-        <i class="f-color fa fa-github"></i>
-        <a class="f-color repolink" href="https://github.com/JasonFritsche/motivationalCats">motivationalCats Repo</a>
-      </div>
+
+    <footer class="footer footer_shadow nav_size nav__nav-theme_light">
+      <i class="icon icon_theme-light icon_size-small fa fa-github"></i>
+      <a class="link-text link-text_theme-light link-text_size-med" href="https://github.com/JasonFritsche/motivationalCats">motivationalCats Repo</a>
     </footer>
   </body>
   <script src="index.js"></script>

@@ -4,11 +4,11 @@ let catImgSrc = document.getElementById("catImg");
 let loader = document.getElementById("loader");
 
 const activateLoader = () => {
-  loader.classList.add("activated");
+  loader.classList.add("loader_activated");
 };
 
 const deactivateLoader = () => {
-  loader.classList.remove("activated");
+  loader.classList.remove("loader_activated");
 };
 
 const getData = async () => {
