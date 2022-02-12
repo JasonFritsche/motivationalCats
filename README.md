@@ -9,7 +9,7 @@ This is an open source project that anyone can feel free to work on and contribu
 - If a CSS rule is no longer used, delete it
 - If a line of JavaScript is no longer used, delete it
 - Maintain responsiveness (Should work on a phone)
-- Use the (BEM Methodology)[https://en.bem.info/methodology/quick-start/#introduction] to the best of your ability
+- Use the [BEM Methodology](https://en.bem.info/methodology/quick-start/#introduction) to the best of your ability
 - No CSS Frameworks
 - No JS Frameworks/Libs (React, Solid, Svelte, Angular...you get the idea)
 - Does not need to support IE :satisfied:
