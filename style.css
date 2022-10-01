@@ -110,6 +110,7 @@ body {
 
 .text-container__text-element {
   font-family: var(--main-font);
+  cursor: default;
 }
 
 .text-container__text-element_size-med {
@@ -204,6 +205,11 @@ body {
   color: #333;
 }
 
+.icon_theme-light:hover {
+  animation-name: hover-animation;
+  animation-duration: 4s;
+}
+
 .icon_size-small {
   font-size: 2rem;
   margin: 0.25rem;
@@ -258,4 +264,12 @@ body {
   to {
     transform: scale(1.3);
   }
+}
+
+@keyframes hover-animation {
+  0%   {color: #333;}
+  25%  {color: #332b87;}
+  50%  {color: #6e176c;}
+  50%  {color: #110a17;}
+  100% {color: #333;}
 }
