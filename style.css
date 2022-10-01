@@ -1,5 +1,15 @@
 :root {
   --main-font: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  --background-nav: rgb(122, 231, 255);
+  --background-main: #ffc3f3;
+  --background-btn: #7606cc;
+  --color-white: #fff;
+  --color-grey:#333;
+  --color-blue:#332b87;
+  --color-purple:#6e176c;
+  --color-black:#110a17;
+  --color-red: #541500;
+  --color-hover:rgb(41, 32, 82);
 }
 
 * {
@@ -29,7 +39,7 @@ body {
 }
 
 .nav__nav-theme_light {
-  background-color: rgb(122, 231, 255);
+  background-color: var(--background-nav);
 }
 
 .nav_shadow {
@@ -69,7 +79,7 @@ body {
 }
 
 .main__main-theme_light {
-  background-color: #ffc3f3;
+  background-color: var(--background-main);
 }
 
 .card {
@@ -84,7 +94,7 @@ body {
 
 .card__card-theme_light {
   background-color: lavenderblush;
-  border: 1px solid #333;
+  border: 1px solid var(--color-grey);
 }
 
 .img-container {
@@ -101,7 +111,7 @@ body {
 }
 
 .img-container__img-theme_light {
-  border: 2px solid #ffc3f3;
+  border: 2px solid var(--background-main);
 }
 
 .text-container_size {
@@ -131,8 +141,8 @@ body {
 }
 
 .btn__theme_light {
-  background-color: #7606cc;
-  color: #fff;
+  background-color: var(--background-btn);
+  color: var(--color-white);
 }
 
 .button-container button:hover {
@@ -178,7 +188,7 @@ body {
 }
 
 .loader__loader-text_theme-light {
-  color: #541500;
+  color: var(--color-red);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -202,7 +212,7 @@ body {
 }
 
 .icon_theme-light {
-  color: #333;
+  color: var(--color-grey);
 }
 
 .icon_theme-light:hover {
@@ -221,7 +231,7 @@ body {
 }
 
 .link-text_theme-light {
-  color: #333;
+  color: var(--color-grey);
 }
 
 .link-text_size-med {
@@ -229,7 +239,7 @@ body {
 }
 
 .link-text_theme-light:hover {
-  color: rgb(41, 32, 82);
+  color: var(--color-hover)
 }
 
 @-webkit-keyframes load3 {
@@ -267,9 +277,9 @@ body {
 }
 
 @keyframes hover-animation {
-  0%   {color: #333;}
-  25%  {color: #332b87;}
-  50%  {color: #6e176c;}
-  50%  {color: #110a17;}
-  100% {color: #333;}
+  0%   {color: var(--color-grey);}
+  25%  {color: var(--color-blue);}
+  50%  {color: var(--color-purple);}
+  50%  {color: var(--color-black);}
+  100% {color: var(--color-grey);;}
 }
