@@ -134,10 +134,17 @@ body {
 }
 
 .btn {
+  width: 100%;
+  max-width: 200px;
   border: none;
-  padding: 6px;
+  padding: 12px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #332b87;
+	font-weight: bold;
 }
 
 .btn__theme_light {
