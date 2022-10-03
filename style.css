@@ -1,8 +1,9 @@
 :root {
   --main-font: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  --background-nav: rgb(122, 231, 255);
-  --background-main: #ffc3f3;
-  --background-btn: #7606cc;
+  --background-nav: rgb(235, 64, 52);
+  --background-main: #fcedda;
+  --background-btn: linear-gradient(#464d55, #25292e);
+  --background-card: rgb(255,240,245);
   --color-white: #fff;
   --color-grey:#333;
   --color-blue:#332b87;
@@ -93,7 +94,7 @@ body {
 }
 
 .card__card-theme_light {
-  background-color: lavenderblush;
+  background-color: var(--background-card);
   border: 1px solid var(--color-grey);
 }
 
@@ -141,7 +142,7 @@ body {
 }
 
 .btn__theme_light {
-  background-color: var(--background-btn);
+  background-image: var(--background-btn);
   color: var(--color-white);
 }
 
