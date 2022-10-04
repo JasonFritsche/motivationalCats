@@ -1,5 +1,6 @@
 :root {
   --main-font: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  --quote-font: "Courgette", "cursive";
   --background-nav: rgb(235, 64, 52);
   --background-main: #fcedda;
   --background-btn: linear-gradient(#464d55, #25292e);
@@ -120,7 +121,7 @@ body {
 }
 
 .text-container__text-element {
-  font-family: var(--main-font);
+  font-family: var(--quote-font);
   cursor: default;
 }
 
@@ -291,3 +292,11 @@ body {
   50%  {color: var(--color-black);}
   100% {color: var(--color-grey);;}
 }
+
+
+
+
+
+
+
+
