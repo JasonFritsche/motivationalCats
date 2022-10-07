@@ -69,3 +69,15 @@ imageObserver.observe(catImgSrc, {
   attributes: true,
   attributeFilter: ["data-loading"],
 });
+
+let copyBtn = document.getElementById("copy-btn");
+let copyText = document.getElementById("copy-text");
+copyBtn.addEventListener("click", () => {
+  const cb = navigator.clipboard;
+  cb.writeText(`${quoteText.innerText} by ${quoteAuthor.innerText}`).then(() => {    
+    copyText.style.display = "inline-block";
+    setTimeout(function(){
+      copyText.style.display = "none";
+  }, 1000);
+  });
+});
