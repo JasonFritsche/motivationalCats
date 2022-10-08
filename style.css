@@ -293,6 +293,16 @@ body {
 .link-text_theme-light:hover {
   color: var(--color-hover)
 }
+.copy-btn{
+  padding: 1rem;
+}
+
+.copy-text {
+  display: none;
+  padding: 0.25rem;
+  font-size: 0.8rem;
+  animation: forwards 0.5s ease-in-out;
+}
 
 @-webkit-keyframes load3 {
   0% {
