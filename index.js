@@ -23,7 +23,9 @@ const getData = async () => {
 };
 
 const getQuote = async () => {
-  const res = await fetch("https://quote-garden.herokuapp.com/api/v3/quotes/random?genre=motivational");
+  const res = await fetch(
+    "https://quote-garden.herokuapp.com/api/v3/quotes/random?genre=motivational"
+  );
   const response = await res.json();
   const data = response.data[0];
   const dataAuthor = `${data.quoteAuthor}`;
@@ -74,10 +76,12 @@ let copyBtn = document.getElementById("copy-btn");
 let copyText = document.getElementById("copy-text");
 copyBtn.addEventListener("click", () => {
   const cb = navigator.clipboard;
-  cb.writeText(`${quoteText.innerText} by ${quoteAuthor.innerText}`).then(() => {    
-    copyText.style.display = "inline-block";
-    setTimeout(function(){
-      copyText.style.display = "none";
-  }, 1000);
-  });
+  cb.writeText(`${quoteText.innerText} by ${quoteAuthor.innerText}`).then(
+    () => {
+      copyBtn.innerHTML = `<i class="icon_theme-dark icon_size-small fa fa-clipboard"></i> Copied`;
+      setTimeout(function () {
+        copyBtn.innerHTML = `<i class="icon_theme-dark icon_size-small fa fa-clipboard"></i>`;
+      }, 1000);
+    }
+  );
 });
