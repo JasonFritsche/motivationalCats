@@ -289,11 +289,15 @@ body {
   color: var(--color-hover)
 }
 .copy-btn{
-  padding: 1rem;
+  /* padding: 1rem; */
+  cursor: pointer;
+}
+.copy-btn:hover{
+  color: red;
 }
 
 .copy-text {
-  display: none;
+  visibility: hidden;
   padding: 0.25rem;
   font-size: 0.8rem;
   animation: forwards 0.5s ease-in-out;

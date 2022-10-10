@@ -75,9 +75,9 @@ let copyText = document.getElementById("copy-text");
 copyBtn.addEventListener("click", () => {
   const cb = navigator.clipboard;
   cb.writeText(`${quoteText.innerText} by ${quoteAuthor.innerText}`).then(() => {    
-    copyText.style.display = "inline-block";
+    copyText.style.visibility = "visible";
     setTimeout(function(){
-      copyText.style.display = "none";
+      copyText.style.visibility = "hidden";
   }, 1000);
   });
 });
