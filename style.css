@@ -164,7 +164,6 @@ body {
 }
 
 .btn {
-
   width: 100%;
   max-width: 200px;
   border: none;
@@ -203,7 +202,7 @@ body {
 
 .btn:hover {
 	background-color: #1f1f1f;
- 
+
   transition: opacity 0.5s;
   animation: 0.8s linear infinite rotate;
 }
@@ -304,7 +303,8 @@ body {
 }
 
 .link-text_size-med {
-  font-size: 1.2rem;
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 
 .link-text_theme-light:hover {
@@ -366,11 +366,3 @@ body {
   50%  {color: var(--color-black);}
   100% {color: var(--color-grey);;}
 }
-
-
-
-
-
-
-
-
