@@ -3,17 +3,37 @@
   --main-font: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   --quote-font: "Courgette", "cursive";
   --background-nav: rgb(235, 64, 52);
-  --background-main: #fcedda;
+  --background-main: #edf2f2;
   --background-btn: linear-gradient(#464d55, #25292e);
   --background-card: rgb(255,240,245);
   --color-white: #fff;
   --color-grey:#333;
   --color-blue:#332b87;
   --color-purple:#6e176c;
-  --color-black:#110a17;
+  --color-black:#000106;
   --color-red: #541500;
   --color-hover:rgb(23, 23, 23);
   --color-shadow: #d4d4d5
+}
+
+/* Dark theme and light Theme Toggle */
+
+.dark-theme {
+
+  --background-main: #000106;
+  
+}
+
+#icon {
+  width: 30px;
+  margin-right: 40px;
+  cursor: pointer;
+  /* padding-right: 50%; */
+  
+}
+
+body {
+  background: #000000;
 }
 
 * {
@@ -52,7 +72,7 @@ body {
 
 .nav__title-container_position {
   margin: 0 auto;
-  padding-right: 64px;
+  
 }
 
 .nav__title-text {
@@ -68,6 +88,7 @@ body {
   color: rgba(243, 243, 243, 0.9);
   /* text-shadow: 0.15em 0.15em rgba(120, 120, 120, 0.3); */
 }
+
 
 .main {
   display: flex;
