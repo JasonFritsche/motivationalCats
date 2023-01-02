@@ -23,13 +23,13 @@ const getData = async () => {
 };
 
 const getQuote = async () => {
-  const res = await fetch("https://quote-garden.herokuapp.com/api/v3/quotes/random?genre=motivational");
+  const res = await fetch("https://type.fit/api/quotes");
   const response = await res.json();
-  const data = response.data[0];
-  const dataAuthor = `${data.quoteAuthor}`;
-  const dataQuoteText = `"${data.quoteText}"`;
+  const {author, text} = response[Math.floor(Math.random() * response.length)];
 
-  quoteText.innerHTML = dataQuoteText;
+  const dataAuthor = `${author}`;
+  quoteText.innerHTML = `"${text}"`;
+
   if (dataAuthor === "") {
     quoteAuthor.innerHTML = "Anonymous";
   } else {
