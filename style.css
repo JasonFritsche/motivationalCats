@@ -1,27 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap");
 :root {
-  --main-font: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  --main-font: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   --quote-font: "Courgette", "cursive";
   --background-nav: rgb(235, 64, 52);
   --background-main: #edf2f2;
   --background-btn: linear-gradient(#464d55, #25292e);
-  --background-card: rgb(255,240,245);
+  --background-card: rgb(255, 240, 245);
   --color-white: #fff;
-  --color-grey:#333;
-  --color-blue:#332b87;
-  --color-purple:#6e176c;
-  --color-black:#000106;
+  --color-grey: #333;
+  --color-blue: #332b87;
+  --color-purple: #6e176c;
+  --color-black: #000106;
   --color-red: #541500;
-  --color-hover:rgb(23, 23, 23);
-  --color-shadow: #d4d4d5
+  --color-hover: rgb(23, 23, 23);
+  --color-shadow: #d4d4d5;
 }
 
 /* Dark theme and light Theme Toggle */
 
 .dark-theme {
+  --background-main: #1a1a1a;
+  /* background-color: #000000; */
+  /* transition: 0.5s ease all; */
+}
 
-  --background-main: #000106;
-  
+.dark-theme-card {
+  border-radius: 11px;
+  /* background: #1a1a1a; */
+  --background-card: #1a1a1a;
+  box-shadow: 11px 11px 22px #141414, -11px -11px 22px #212121;
+  color: #f5f5f5;
+  transition: all 1s ease;
+}
+.dark-theme-nav {
+  --background-nav: #678983;
 }
 
 #icon {
@@ -29,11 +42,11 @@
   margin-right: 40px;
   cursor: pointer;
   /* padding-right: 50%; */
-  
 }
 
 body {
   background: #000000;
+  transition: all 1s;
 }
 
 * {
@@ -56,6 +69,7 @@ body {
   align-items: center;
   position: relative;
   z-index: 2;
+  transition: background-color 0.5s ease;
 }
 
 .nav_size {
@@ -72,11 +86,10 @@ body {
 
 .nav__title-container_position {
   margin: 0 auto;
-  
 }
 
 .nav__title-text {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   cursor: default;
 }
 
@@ -89,7 +102,6 @@ body {
   /* text-shadow: 0.15em 0.15em rgba(120, 120, 120, 0.3); */
 }
 
-
 .main {
   display: flex;
   flex-direction: row;
@@ -101,6 +113,7 @@ body {
   height: 85vh;
   min-height: 485px;
   height: 100%;
+  transition: background-color 0.5s ease;
 }
 
 .main__main-theme_light {
@@ -121,11 +134,12 @@ body {
 
 .card__card-theme_light {
   background-color: var(--background-card);
-  transition: box-shadow .5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  transition: all 0.5s ease;
 }
 
-.card__card-theme_light:hover{
-  box-shadow: 0 1px 3px 0 var(--color-shadow), 0 0 0 1px var(--color-shadow);
+.card__card-theme_light:hover {
+  transform: scale(1.025);
 }
 
 .img-container {
@@ -135,13 +149,12 @@ body {
 
 .img-container__img {
   object-fit: cover;
-  width: 100%
+  width: 100%;
 }
 
 .img-container__img_size {
   max-height: 40vh;
 }
-
 
 .text-container_size {
   max-width: 80%;
@@ -170,9 +183,7 @@ body {
   padding: 12px;
   border-radius: 5px;
   cursor: pointer;
-
 }
-
 
 .btn span {
   cursor: pointer;
@@ -182,7 +193,7 @@ body {
 }
 
 .btn span:after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 0;
@@ -199,9 +210,8 @@ body {
   right: 0;
 }
 
-
 .btn:hover {
-	background-color: #1f1f1f;
+  background-color: #1f1f1f;
 
   transition: opacity 0.5s;
   animation: 0.8s linear infinite rotate;
@@ -273,6 +283,7 @@ body {
   position: relative;
   z-index: 2;
   color: rgb(237, 237, 237);
+  transition: background-color 0.5s ease;
 }
 
 .footer_shadow {
@@ -284,7 +295,6 @@ body {
 }
 
 .icon_theme-light:hover {
-
   color: var(--color-hover);
 }
 
@@ -308,13 +318,13 @@ body {
 }
 
 .link-text_theme-light:hover {
-  color: var(--color-hover)
+  color: var(--color-hover);
 }
-.copy-btn{
+.copy-btn {
   /* padding: 1rem; */
   cursor: pointer;
 }
-.copy-btn:hover{
+.copy-btn:hover {
   color: red;
 }
 
@@ -360,9 +370,19 @@ body {
 }
 
 @keyframes hover-animation {
-  0%   {color: var(--color-grey);}
-  25%  {color: var(--color-blue);}
-  50%  {color: var(--color-purple);}
-  50%  {color: var(--color-black);}
-  100% {color: var(--color-grey);;}
+  0% {
+    color: var(--color-grey);
+  }
+  25% {
+    color: var(--color-blue);
+  }
+  50% {
+    color: var(--color-purple);
+  }
+  50% {
+    color: var(--color-black);
+  }
+  100% {
+    color: var(--color-grey);
+  }
 }
