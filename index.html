@@ -4,61 +4,123 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Async Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      />
     </noscript>
     <!-- Compiled and minified JavaScript -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    
+
     <title>Motivational Cats</title>
   </head>
 
   <body onload="getData()">
     <nav class="nav nav_size nav__nav-theme_light nav_shadow">
-      <img class="nav__img" src="https://img.icons8.com/ios/50/000000/pixel-cat.png" alt="Page logo of a pixelated cat"/>
+      <img
+        class="nav__img"
+        src="https://img.icons8.com/ios/50/000000/pixel-cat.png"
+        alt="Page logo of a pixelated cat"
+      />
       <div class="nav__title-container nav__title-container_position">
-        <h5 class="nav__title-text nav__title-text_size nav__title-text_light-theme">Motivational Cats</h5>
+        <h5
+          class="nav__title-text nav__title-text_size nav__title-text_light-theme"
+        >
+          Motivational Cats
+        </h5>
       </div>
-      <img src="img/moon.png" id="icon"> <!--Adding Icon for changing theme toggle-->
+      <img src="img/moon.png" id="icon" />
+      <!--Adding Icon for changing theme toggle-->
     </nav>
 
     <main class="main main_size main__main-theme_light">
       <div class="card card_size card__card-theme_light">
         <div class="img-container">
-          <img id="catImg" src="" alt="cat image" class="img-container__img img-container__img_size img-container__img-theme_light" />
+          <img
+            id="catImg"
+            src=""
+            alt="cat image"
+            class="img-container__img img-container__img_size img-container__img-theme_light"
+          />
         </div>
         <div class="text-container text-container_size">
-          <p id="quoteText" class="text-container__text-element text-container__text-element_size-med"></p>
-          <span id="quoteAuthor" class="text-container__text-element text-container__text-element_size-lg"></span>
+          <p
+            id="quoteText"
+            class="text-container__text-element text-container__text-element_size-med"
+          ></p>
+          <span
+            id="quoteAuthor"
+            class="text-container__text-element text-container__text-element_size-lg"
+          ></span>
         </div>
 
-        <span id="copy-btn" class="copy-btn"><i class=" icon_size-small fa fa-clipboard"></i></span>
+        <span id="copy-btn" class="copy-btn"
+          ><i class="icon_size-small fa fa-clipboard"></i
+        ></span>
         <span id="copy-text" class="copy-text">Copied to Clipboard!</span>
 
-        <button class="btn btn__theme_light" id="quoteGetter"><span>Get Motivated</span></button>
+        <button class="btn btn__theme_light" id="quoteGetter">
+          <span>Get Motivated</span>
+        </button>
       </div>
 
-      <div class="loader loader_position-default loader_theme-light" id="loader">
-        <strong class="loader__loader-text loader__loader-text_theme-light loader__loader-text_default-size">Loading...</strong>
+      <div
+        class="loader loader_position-default loader_theme-light"
+        id="loader"
+      >
+        <strong
+          class="loader__loader-text loader__loader-text_theme-light loader__loader-text_default-size"
+          >Loading...</strong
+        >
         <div class="img-container">
-          <img class="img-container__img_loader img-container__img_default-size" src="img/loading-cat-face.png" alt="cat face" />
+          <img
+            class="img-container__img_loader img-container__img_default-size"
+            src="img/loading-cat-face.png"
+            alt="cat face"
+          />
         </div>
       </div>
     </main>
 
     <footer class="footer footer_shadow nav_size nav__nav-theme_light">
       <i class="icon_theme-light icon_size-small fa fa-github"></i>
-      <a class="link-text link-text_theme-light link-text_size-med" href="https://github.com/JasonFritsche/motivationalCats">motivationalCats Repo</a>
+      <a
+        class="link-text link-text_theme-light link-text_size-med"
+        href="https://github.com/JasonFritsche/motivationalCats"
+        >motivationalCats Repo</a
+      >
     </footer>
   </body>
   <script src="index.js"></script>
